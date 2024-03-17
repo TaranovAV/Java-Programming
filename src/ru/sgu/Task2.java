@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.math.RoundingMode;
 
 public class Task2 {
-    public static void start() {
+    public void start() {
         System.out.println("""
                 Введите 2 числи и операцию через пробел\s
                 Доступные операции: ADD, SUB, MULT, DIV, REM, POW\s

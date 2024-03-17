@@ -20,13 +20,16 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    Task1.start();
+                    Task1 task1 = new Task1();
+                    task1.start();
                     break;
                 case "2":
-                    Task2.start();
+                    Task2 task2 = new Task2();
+                    task2.start();
                     break;
                 case "3":
-                    Task3.start();
+                    Task3 task3 = new Task3();
+                    task3.start();
                     break;
                 case "4":
                     System.out.println("Выход...");
