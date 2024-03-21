@@ -1,5 +1,6 @@
 package ru.sgu;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Main {
@@ -25,17 +26,23 @@ public class Main {
                         task1.start();
                         break;
                     case "2":
-                        Task2 task2 = new Task2();
-                        task2.start();
+                        System.out.println("Введите день недели и число:");
+                        try (Scanner scanner = new Scanner(System.in)) {
+                            String weekday = scanner.next().toLowerCase();
+                            int addDays = scanner.nextInt();
+                            Task2 task2 = new Task2(weekday, addDays);
+                            task2.start();
+                        } catch (NoSuchElementException | IllegalArgumentException e) {
+                            System.out.println(e.getMessage());
+                            System.exit(1);
+                        }
                         break;
                     case "3":
                         Task3 task3 = new Task3();
                         task3.start();
-                        in.close();
                         return;
                     case "4":
                         System.out.println("Выход...");
-                        in.close();
                         return;
                     default:
                         System.out.println("Неверный ввод. Попробуйте снова.");

@@ -16,17 +16,9 @@ public class Task2 {
         }
     }
 
-    public Task2() {
-        System.out.println("Введите день недели и число:");
-        try (Scanner scanner = new Scanner(System.in)) {
-            String weekday = scanner.next().toLowerCase();
-            this.addDays = scanner.nextInt();
-            this.addDays = (this.addDays % 7 + 7) % 7;
-            this.today = Day.valueOf(weekday);
-        } catch (NoSuchElementException | IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            System.exit(1);
-        }
+    public Task2(String weekday, Integer addDays) {
+        this.addDays = (addDays % 7 + 7) % 7;
+        this.today = Task2.Day.valueOf(weekday);
     }
 
     public void start() {

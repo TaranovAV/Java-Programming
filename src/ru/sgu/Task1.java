@@ -36,7 +36,7 @@ public class Task1 {
             }
         } catch (Exception e) {
             System.out.println("Произошла ошибка ввода. Завершение программы.");
-            System.exit(1);
+            System.exit(0);
         }
     }
 
