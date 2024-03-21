@@ -34,7 +34,7 @@ public class Main {
                             task2.start();
                         } catch (NoSuchElementException | IllegalArgumentException e) {
                             System.out.println(e.getMessage());
-                            System.exit(1);
+                            System.exit(0);
                         }
                         break;
                     case "3":
